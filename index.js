@@ -1,19 +1,10 @@
 var convert = require('color-convert');
 
-if (process.argv) {
-    var Canvas = (require)('canvas');
-}
-
 function createCanvas (width, height) {
-    if (typeof Canvas !== 'undefined') {
-        return new Canvas(width, height);
-    }
-    else {
-        var canvas = document.createElement('canvas');
-        canvas.setAttribute('width', width);
-        canvas.setAttribute('height', height);
-        return canvas;
-    }
+    var canvas = document.createElement('canvas');
+    canvas.setAttribute('width', width);
+    canvas.setAttribute('height', height);
+    return canvas;
 }
 
 var exports = module.exports = function (canvas) {
